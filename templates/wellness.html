@@ -1,0 +1,164 @@
+{% include 'navbar.html'%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Wellness | PetMedPal </title>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Mulish:600,800|Inter:400");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+.frame {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.frame .frame-wrapper {
+  background-image: url(https://c.animaapp.com/c8HFY3nI/img/rectangle-89.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 700px;
+}
+
+.frame .div {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 65px;
+  top: 92px;
+  left: 183px;
+  align-items: center;
+  position: relative;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  width: 1194px;
+  height: 126px;
+  margin-top: -1px;
+  font-family: "Mulish", Helvetica;
+  font-weight: 800;
+  color: #603d25;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .p {
+  position: relative;
+  width: 1045px;
+  height: 201px;
+  font-family: "Mulish", Helvetica;
+  font-weight: 600;
+  color: #603d25;
+  font-size: 30px;
+  text-align: justify;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-2 {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 61px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.frame .div-wrapper {
+  display: flex;
+  width: 299px;
+  height: 50px;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #603d25;
+  border-radius: 20px;
+  align-items: center;
+  position: relative;
+}
+
+.frame .text-wrapper-2 {
+  position: relative;
+  width: 301px;
+  margin-top: -1px;
+  margin-left: -11px;
+  margin-right: -11px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #b99976;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #b99976;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+:root {
+  --main-font-color: rgba(96, 61, 37, 1);
+  --button-color: rgba(159, 126, 104, 1);
+  --STD-TEXT-font-family: "Mulish-SemiBold", Helvetica;
+  --STD-TEXT-font-weight: 600;
+  --STD-TEXT-font-size: 12px;
+  --STD-TEXT-letter-spacing: 0px;
+  --STD-TEXT-line-height: normal;
+  --STD-TEXT-font-style: normal;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="frame-wrapper">
+        <div class="div">
+          <p class="text-wrapper">Thriving Tails, Vibrant Lives: Nurturing Pet Wellness Together</p>
+          <p class="p">
+            Ensuring your pet’s well-being involves a holistic approach encompassing nutrition, regular exercise,
+            preventive healthcare, and lots of love. A balanced diet tailored to their needs, routine veterinary
+            check-ups, and engaging playtime contribute to their physical health, while mental stimulation and
+            companionship are vital for their emotional happiness.
+          </p>
+          <div class="div-2">
+            <div class="div-wrapper"><div class="text-wrapper-2">Shop products now</div></div>
+            <div class="div-wrapper"><div class="text-wrapper-3">Read about Wellness</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+{% include 'footer.html'%}

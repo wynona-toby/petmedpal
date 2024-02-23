@@ -1,0 +1,445 @@
+{% include 'navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Diet Consultation | PetMedPal </title>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+      * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0px;
+        height: 100%;
+      }
+
+      button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+        outline: -webkit-focus-ring-color auto 5px !important;
+      }
+      a {
+        text-decoration: none;
+      }
+      .diet-consultation {
+        background-color: #ede1cc;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+      }
+      
+      .diet-consultation .div {
+        background-color: #ede1cc;
+        width: 100%;
+        height: 4085px;
+        position: relative;
+      }
+      
+      .diet-consultation .frame {
+        position: absolute;
+        width: 100%;
+        height: 804px;
+        top: 0;
+        left: 0;
+      }
+      
+      .diet-consultation .overlap-group {
+        position: relative;
+        height: 808px;
+        background-image: url(https://c.animaapp.com/ACy37iIp/img/rectangle-91.png);
+        background-size: 100% 100%;
+      }
+      
+      .diet-consultation .frame-2 {
+        position: absolute;
+        width: 1194px;
+        height: 507px;
+        top: 77px;
+        left: 123px;
+      }
+      
+      .diet-consultation .text-wrapper {
+        position: absolute;
+        width: 1194px;
+        top: 15px;
+        left: 0;
+        font-family: "Mulish", Helvetica;
+        font-weight: 800;
+        color: #603d25;
+        font-size: 50px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .welcome-to-our-pet {
+        position: absolute;
+        width: 1045px;
+        top: 193px;
+        left: 110px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 600;
+        color: #603d25;
+        font-size: 30px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .p {
+        position: absolute;
+        width: 1045px;
+        top: 431px;
+        left: 110px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 600;
+        color: #603d25;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .div-wrapper {
+        display: flex;
+        width: 290px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 642px;
+        left: 577px;
+        background-color: #603d25;
+        border-radius: 50px;
+      }
+      
+      .diet-consultation .text-wrapper-2 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 600;
+        color: #b99976;
+        font-size: 30px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .frame-3 {
+        position: absolute;
+        width: 1435px;
+        height: 455px;
+        top: 884px;
+        left: 5px;
+        background-color: #ede1cc;
+      }
+      
+      .diet-consultation .frame-4 {
+        position: absolute;
+        width: 400px;
+        height: 60px;
+        top: 53px;
+        left: 518px;
+        border-radius: 50px;
+        border: 2px solid;
+        border-color: #603d25;
+      }
+      
+      .diet-consultation .frame-5 {
+        display: flex;
+        width: 181px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        background-color: #ede1cc;
+        border-radius: 50px 0px 0px 50px;
+      }
+      
+      .diet-consultation .text-wrapper-3 {
+        position: relative;
+        width: fit-content;
+        margin-top: -9.77px;
+        margin-bottom: -7.77px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 600;
+        color: #603d25;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .frame-6 {
+        display: flex;
+        width: 181px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 8px;
+        left: 204px;
+        background-color: #603d25;
+        border-radius: 0px 50px 50px 0px;
+      }
+      
+      .diet-consultation .text-wrapper-4 {
+        position: relative;
+        width: fit-content;
+        margin-top: -9.77px;
+        margin-bottom: -7.77px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 600;
+        color: #ede1cc;
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .DISCLAIMER-our-wrapper {
+        position: absolute;
+        width: 1194px;
+        height: 189px;
+        top: 167px;
+        left: 170px;
+      }
+      
+      .diet-consultation .DISCLAIMER-our {
+        position: absolute;
+        width: 1194px;
+        top: -1px;
+        left: 0;
+        font-family: "Mulish", Helvetica;
+        font-weight: 400;
+        color: #603d25;
+        font-size: 30px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .span {
+        font-weight: 900;
+      }
+      
+      .diet-consultation .text-wrapper-5 {
+        font-weight: 600;
+        left: 100px;
+      }
+      
+      .diet-consultation .frame-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 2746px;
+        top: 1339px;
+        left: 0;
+        background-color: #b99976;
+      }
+      
+      .diet-consultation .frame-7 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 71px;
+        position: relative;
+        top: 111px;
+        left: 164px;
+      }
+      
+      .diet-consultation .frame-8 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 102px;
+        position: relative;
+        flex: 0 0 auto;
+      }
+      
+      .diet-consultation .frame-9 {
+        display: flex;
+        width: 1117px;
+        height: 750px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: relative;
+        background-color: #e5d4b5b3;
+        left: 50px;
+      }
+      
+      .diet-consultation .UNDERWEIGHT {
+        position: relative;
+        width: 1025px;
+        height: 585px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 400;
+        color: #603d25;
+        font-size: 30px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .text-wrapper-6 {
+        font-weight: 700;
+        text-align: center;
+      }
+      
+      .diet-consultation .text-wrapper-7 {
+        font-family: "Mulish", Helvetica;
+        font-weight: 600;
+      }
+      
+      .diet-consultation .NORMAL-BMI-it-is {
+        position: relative;
+        width: 1025px;
+        height: 696px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 400;
+        color: #603d25;
+        font-size: 30px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .OVERWEIGHT-you {
+        position: relative;
+        width: 1025px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 400;
+        color: #603d25;
+        font-size: 30px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .diet-consultation .BACK-wrapper {
+        display: flex;
+        width: 161px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: relative;
+        background-color: #603d25;
+        border-radius: 20px;
+      }
+      
+      .diet-consultation .BACK {
+        position: relative;
+        width: 140px;
+        margin-top: -6px;
+        margin-bottom: -4px;
+        font-family: "Mulish", Helvetica;
+        font-weight: 400;
+        color: #b99976;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      :root {
+        --main-font-color: rgba(96, 61, 37, 1);
+        --button-color: rgba(159, 126, 104, 1);
+        --STD-TEXT-font-family: "Mulish-SemiBold", Helvetica;
+        --STD-TEXT-font-weight: 600;
+        --STD-TEXT-font-size: 12px;
+        --STD-TEXT-letter-spacing: 0px;
+        --STD-TEXT-line-height: normal;
+        --STD-TEXT-font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="diet-consultation">
+      <div class="div">
+        <div class="frame">
+          <div class="overlap-group">
+            <div class="frame-2">
+              <p class="text-wrapper">Pawsitively Tailored Diets: Nourishing Your Pet, One Bowl at a Time!</p>
+              <p class="welcome-to-our-pet">
+                Welcome to our Pet Nutrition Consultation! Ensuring your furry friend enjoys a healthy and balanced diet
+                is our top priority. Let&#39;s embark on a journey to optimize their well-being through personalized
+                nutrition plans tailored just for them.
+              </p>
+              <p class="p">CALCULATE YOUR PET’S BMI WITH OUT BMI CALCULATOR AND GET PERSONALIZED DIET CONSULTATION</p>
+            </div>
+            <div class="div-wrapper"><div class="text-wrapper-2">Calculate BMI</div></div>
+          </div>
+        </div>
+        <div class="frame-3">
+          <div class="frame-4">
+            <div class="frame-5"><a href="{%url 'diet_cons1'%}" class="text-wrapper-3">DOG</a></div>
+            <div class="frame-6"><div class="text-wrapper-4">CAT</div></div>
+          </div>
+          <div class="DISCLAIMER-our-wrapper">
+            <p class="DISCLAIMER-our">
+              <span class="span">DISCLAIMER : </span>
+              <span class="text-wrapper-5"
+                >Our suggested diet plans are crafted based on extensive research, but it&#39;s crucial to consult with
+                a veterinarian before implementing any changes to your pet&#39;s diet. Your pet&#39;s health is our
+                priority, and professional guidance ensures their nutritional needs are met effectively. Always seek
+                veterinary advice for the best and safest results.<br
+              /></span>
+            </p>
+          </div>
+        </div>
+        <div class="frame-wrapper">
+          <div class="frame-7">
+            <div class="frame-8">
+              <div class="frame-9">
+                <p class="UNDERWEIGHT">
+                  <span class="text-wrapper-6">UNDERWEIGHT (1-2)<br /></span>
+                  <span class="text-wrapper-7"
+                    ><br />Weaned off kittens need a high-protein diet based on whole meat. You should inspect the ingredients of a product sold as kitten food to verify their protein, fat, and carb contents.
+                    Many kitten products, especially biscuits, are packed with more carbohydrates than proteins. They will fatten up your kitty without giving them proper muscle tone. A dry food diet can also turn kittens into kibble addicts, so they’ll struggle to accept wet food later in life.A good strategy to beef up underweight kittens is to feed them small servings of wet food every 3–4 hours. Larger portions can cause diarrhoea, which can be super dangerous for younglings. Keep harmful food and snacks away from your kitten so that a nasty case of food poisoning doesn’t mar their development.<br
+                  /></span>
+                </p>
+              </div>
+              <div class="frame-9">
+                <p class="NORMAL-BMI-it-is">
+                  <span class="text-wrapper-6">NORMAL BMI (3-5)<br /></span>
+                  <span class="text-wrapper-7"
+                    ><br />your cat needs a high-fat, high-protein diet along with other important nutrients. Cats usually eat many small meals throughout the day, so they easily adopt a free choice feeding schedule to maintain their normal body weight.
+                    * Animal protein from meat, poultry, fish, or egg sources to maintain strong muscular structure, vital organs, antibodies, and more.
+                    * Taurine, an amino acid, found in meat sources such as chicken and fish, but not in plant proteins, to maintain healthy eyes, prevent heart disease. It also promotes healthy reproduction, fetal growth, and development.
+                    * Essential vitamins and minerals such as vitamin A, which can be found pre-formed only in animal tissues, and vitamin E to help support the immune system.
+                    * A precise balance of fatty acids to help promote excellent skin and coat health.
+                    * A fiber source, such as beet pulp, that will help maintain your cat's digestive system health
+                    </span>
+                </p>
+              </div>
+              <div class="frame-9">
+                <p class="OVERWEIGHT-you">
+                  <span class="text-wrapper-6">OVERWEIGHT (5-7)<br /></span>
+                  <span class="text-wrapper-7"
+                    ><br />Theoretically, weight loss seems simple enough: fewer calories in plus more calories out equals weight loss. Unfortunately, it is not as simple as that. You should never put an obese cat on a diet without veterinary supervision. your veterinarian will examine your cat to determine its ideal body weight, based on its body size and build. Formulas and charts have been developed to assist your veterinarian in determining this weight, as well as the number of calories required to achieve it safely.
+
+                    .<br
+                  /></span>
+                </p>
+              </div>
+            </div>
+            <div class="BACK-wrapper"><div class="BACK">BACK -&gt;</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+{% include 'footer.html' %}

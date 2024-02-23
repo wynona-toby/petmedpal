@@ -1,0 +1,265 @@
+{% include 'navbar.html'%}
+<style>
+  body {
+    margin: 0;
+  }
+  .services {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  
+  .services .div {
+    width: 100%;
+    height: 630px;
+    background-image: url(https://i.postimg.cc/28kv06Z7/smallpawbg.png);
+    position: relative;
+  }
+  
+  .services .overlap {
+    position: absolute;
+    width: 100%;
+    height: 560px;
+    top: 60px;
+    left: 30px;
+    background-size: 100% 100%;
+  }
+  
+  .services .rectangle {
+    position: absolute;
+    width: 1308px;
+    height: 446px;
+    top: 50px;
+    left: 66px;
+    background-color: #f7efe4;
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #603d25;
+  }
+  
+  .services .tailored-wellness {
+    position: absolute;
+    width: 1253px;
+    top: 50px;
+    left: 93px;
+    font-family: "Mulish-Black", Helvetica;
+    font-weight: 400;
+    color: #603d25;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .services .text-wrapper {
+    top: 50px;
+    font-weight: 900;
+  }
+  
+  .services .span {
+    font-family: "Mulish-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .services .group {
+    left: 107px;
+    background-color: #e6d4b6;
+    border-radius: 50px;
+    position: absolute;
+    width: 270px;
+    height: 250px;
+    top: 230px;
+  }
+  
+  .services .frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 12px;
+    left: 29px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #603d25;
+  }
+  
+  .services .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -2px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Mulish-Bold", Helvetica;
+    font-weight: 700;
+    color: #603d25;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .services .ellipse {
+    left: 55px;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 76px;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 2px solid #603d25;
+  }
+  
+  .services .group-2 {
+    left: 424px;
+    background-color: #e6d4b6;
+    border-radius: 50px;
+    position: absolute;
+    width: 270px;
+    height: 250px;
+    top: 230px;
+  }
+  
+  .services .div-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 12px;
+    left: 56px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #603d25;
+  }
+  
+  .services .group-3 {
+    left: 741px;
+    background-color: #e6d4b6;
+    border-radius: 50px;
+    position: absolute;
+    width: 270px;
+    height: 250px;
+    top: 230px;
+  }
+  
+  .services .frame-2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #603d25;
+  }
+  
+  .services .group-4 {
+    left: 1058px;
+    background-color: #e6d4b6;
+    border-radius: 50px;
+    position: absolute;
+    width: 270px;
+    height: 250px;
+    top: 230px;
+  }
+  
+  .services .frame-3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 12px;
+    left: 22px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #603d25;
+  }
+  
+  .services .frame-4 {
+    position: absolute;
+    width: 1440px;
+    height: 314px;
+    top: 712px;
+    left: 0;
+    background-color: var(--mainbg);
+  }
+  
+  .services .p {
+    position: absolute;
+    width: 499px;
+    top: 39px;
+    left: 80px;
+    font-family: "Mulish-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: var(--mainfontcolor);
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .services .group:hover,
+  .services .group-2:hover,
+  .services .group-3:hover,
+  .services .group-4:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .services .group:active,
+  .services .group-2:active,
+  .services .group-3:active,
+  .services .group-4:active {
+    opacity: 0.7;
+  }
+  
+  :root {
+    --mainfontcolor: rgba(96, 61, 37, 1);
+    --main-font-color: rgba(96, 61, 37, 1);
+    --mainbg: rgba(230, 212, 182, 0.7);
+    --collection-1-button-color: rgba(185, 153, 118, 1);
+  }
+  
+</style>
+
+
+<body>
+  <div class="services">
+    <div class="div">
+      <div class="overlap">
+        <div class="rectangle"></div>
+        <p class="tailored-wellness">
+          <span class="text-wrapper">Tailored Wellness, Unmatched Care<br /></span>
+          <span class="span">Our Website is dedicated to Elevating Your Pet&#39;s Health Journey!</span>
+        </p>
+        <a href="{%url 'med_ser'%}" class="group">
+          <div class="frame"><div class="text-wrapper-2">MEDICAL SUPPORT</div></div>
+          <img class="ellipse" src="https://i.postimg.cc/hjTnQTb8/copetins.jpg" />
+        </a>
+        <a href="{%url 'vac_base'%}" class="group-2">
+          <div class="div-wrapper"><div class="text-wrapper-2">VACCINATION</div></div>
+          <img class="ellipse" src="https://i.postimg.cc/RqrnQcjM/image.jpg" />
+        </a>
+        <a href="{%url 'wellness'%}" class="group-3">
+          <div class="frame-2"><div class="text-wrapper-2">WELLNESS</div></div>
+          <img class="ellipse" src="https://i.postimg.cc/BnpBsVrH/services-7.jpg" />
+        </a>
+        <a href="{%url 'diet_cons1'%}" class="group-4">
+          <div class="frame-3"><div class="text-wrapper-2">DIET CONSULTATION</div></div>
+          <img class="ellipse" src="https://i.postimg.cc/433b31GM/Adobe-Stock-209062001-1080x675.jpg" />
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+{% include 'footer.html'%}

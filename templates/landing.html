@@ -1,0 +1,303 @@
+<head><title>PetMedPal | Home</title>
+  <script src="https://kit.fontawesome.com/0a95f6b081.js" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap');
+  </style>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font_fam);
+      scroll-behavior: smooth;
+    }
+    :root{
+      --main_bg: #e6d4b6;
+      --pri_font: #603d25;
+      --sec_font: #5B4C42;
+      --ter_font: #987554;
+      --font_fam: 'Mulish', sans-serif;
+    }
+    nav{
+      background: var(--main_bg);
+      height: 80px;
+      position: fixed;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 11;
+    }
+    nav img{
+      height: 70px;
+    }
+    nav ul{
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      /* border: 2px solid red; */
+      width: inherit;
+      justify-content: flex-end;
+      margin: 0 50px;
+    }
+    nav ul li{
+      padding: 0 50px;
+    }
+    nav ul li a{
+      color: var(--sec_font);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .container{
+      background: var(--main_bg);
+      height: calc(60vh + 80px);
+      border-radius: 0 0 40vh 0;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+    .image{
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 15vw;
+      bottom: calc(40vh - 80px);
+    }
+    .content{
+      padding: 0px 10px;
+      position: absolute;
+      left: 15vw;
+      top: 120px;
+    }
+    .content h1{
+      color: var(--pri_font);
+      font-size: 45px;
+    }
+    .content p{
+      color: var(--ter_font);
+      font-size: 18px;
+      padding: 10px 0 0 0;
+    }
+    .content h2{
+      color: var(--sec_font);
+      padding: 10px 0 0 0;
+      font-size: 45px;
+    }
+    .content button{
+      background: var(--ter_font);
+      padding: 10px 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .content button a{
+      text-decoration: none;
+      color: var(--main_bg);
+    }
+  
+    .login{
+      height: calc(60vh + 120px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 100px;
+    }
+    .login h1{
+      color: var(--pri_font);
+      font-size: 35px;
+    }
+    .login p{
+      color: var(--ter_font);
+      font-size: 20px;
+      padding: 10px 0 0 0;
+    }
+    .login .cta{
+      width: 40vw;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .login button{
+      background: var(--ter_font);
+      padding: 10px 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .login button a{
+      text-decoration: none;
+      color: #fff;
+    }
+  
+    .about{
+      background: var(--main_bg);
+      border-radius: 40vh 0 40vh 0;
+      height: calc(60vh);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+      margin-top: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .about h1{
+      color: var(--pri_font);
+      font-size: 35px;
+    }
+    .about .data{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      height: 60vh;
+    }
+    .about .data .abtImg1{
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+      position: absolute;
+      left: 20px;
+      top: 50px;
+    }
+    .about .data .abtImg2{
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      position: absolute;
+      right: calc(10vh);
+      top: 0vh;
+    }
+    .about .data .info{
+      padding: 0px 10px;
+      color: var(--ter_font);
+      width: 40vw;
+      position: absolute;
+      left: 25vw;
+      bottom: 40%;
+      text-align: center;
+    }
+  
+    .knowUs{
+      height: calc(60vh);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 100px;
+    }
+    .knowUs h1{
+      color: var(--pri_font);
+      font-size: 35px;
+    }
+    .knowUs .card{
+      width: 80vw;
+      margin: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .knowUs .card .profile{
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .knowUs .card .profile .pfp{
+      height: 150px;
+      width: 150px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .knowUs .card .profile .name{
+      color: var(--ter_font);
+    }
+    a {
+      color: rgba(96, 61, 37, 1);
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color:#F7EFE4;
+    }
+  </style>
+  <nav>
+  <img src="https://i.postimg.cc/FRvX0wB1/petmedpal.png" alt="LOGO">
+  <ul>
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#login">REGISTER</a></li>
+    <li><a href="#connect">CONNECT</a></li>
+  </ul>
+</nav>
+  <div class="container" id="home">
+    <div class="content">
+      <h1>PETMEDPAL</h1>
+      <p>Ensuring happy tails with every swipe...</p>
+      <h2>Your Pet's <br> Health, Our <br> Priority!</h2>
+      <button><a href="#login">Start your journey</a></button>
+    </div>
+    <div class="image"><img src="https://i.postimg.cc/HkKhQShf/Whats-App-Image-2023-10-10-at-10-07-1.png" alt="Dogs and cats"></div>
+  </div>
+  
+  <div class="login" id="login">
+    <h1>Welcome to PetMedPal</h1>
+    <p>Where we Paw-sitively Care for your Furry Friends</p>
+    <img src="https://i.postimg.cc/rm2HYMrS/bg.png" alt="">
+    <div class="cta">
+      <button><a href="{%url 'login'%}">LOGIN</a></button>
+      <button><a href="{%url 'register'%}">SIGNUP</a></button>
+    </div>
+  </div>
+  
+  <div class="about" id="about">
+    <h1>Caring for Pets, One Paw at a Time</h1>
+    
+    <div class="data">
+      <img class="abtImg1" src="https://i.postimg.cc/ydCpGDBj/poocha-1.png" alt="DogsnCats">
+      <img class="abtImg2" src="https://i.postimg.cc/dVz57h7F/2-dogs-1.png" alt="DogsnCats">
+      <div class="info">
+      "From the makers of PetMedPal, we're here to make tails wag and hearts purr. Our mission is to provide the best care for your furry family members, ensuring their happiness and well-being. Thanks for entrusting us with your pets' care. They're not just pets; they're family.”
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="knowUs" id="connect">
+    <h1>“Committed to the Health and Happiness of Your Pets”</h1>
+    
+    <div class="card">
+      <div class="profile">
+        <img src="https://i.postimg.cc/0QGX19ys/Ellipse-1.png" alt="Riya" class="pfp">
+        <h3 class="name">Riya Mathew</h3>
+      </div>
+      <div class="profile">
+        <img src="https://i.postimg.cc/nchRNb8y/Ellipse-2.png" alt="Iris" class="pfp">
+        <h3 class="name">Iris Sarah Varghese</h3>
+      </div>
+      <div class="profile">
+        <img src="https://i.postimg.cc/c4k9S90r/Ellipse-3.png" alt="Steffi" class="pfp">
+        <h3 class="name">Steffi Mary Varghese</h3>
+      </div>
+      <div class="profile">
+        <img src="https://i.postimg.cc/j2sgsBDJ/Ellipse-4.png" alt="Wynona" class="pfp">
+        <h3 class="name">Wynona Toby</h3>
+      </div>
+    </div>
+  </div>
+  </div>
+  {% include 'footer.html'%}
+  
+  </main>

@@ -1,0 +1,101 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+</style>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .HEADER {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index:20;
+  }
+
+  .HEADER .navbar-wrapper {
+    width: 100%;
+    height: 60px;
+  }
+
+  .HEADER .navbar {
+    display: flex;
+    position: relative;
+    height: 60px;
+    background-color: #b99976;
+    align-items: center; 
+  }
+
+  .HEADER .text-wrapper,
+  .HEADER .div,
+  .HEADER .text-wrapper-2,
+  .HEADER .text-wrapper-3 {
+    position: absolute;
+    font-family: "Mulish-SemiBold", Helvetica;
+    font-weight: 300;
+    color: var(--main-font-color);
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  .HEADER .text-wrapper {
+    right: 630px;
+  }
+
+  .HEADER .div {
+    right: 180px;
+  }
+
+  .HEADER .text-wrapper-2 {
+    right: 340px;
+  }
+
+  .HEADER .text-wrapper-3 {
+    right: 500px;
+  }
+
+  .HEADER .user-icon {
+    position: absolute;
+    right: 50px;
+    font-style: normal;
+    font-size: 28px; 
+  }
+
+  .HEADER .whatsapp-image {
+    position: absolute;
+    width: 74px;
+    height: 50px;
+    top: 2px;
+    left: 5px;
+    object-fit: cover;
+  }
+
+  a {
+    color: rgba(96, 61, 37, 1);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #f7efe4;
+  }
+</style>
+
+<body>
+  <div class="HEADER">
+    <div class="navbar-wrapper">
+      <div class="navbar">
+        <div class="text-wrapper"><a href="{%url 'services'%}">SERVICES</a></div>
+        <div class="div"><a href="{%url 'landing'%}"> LOGOUT </a></div>
+        <div class="text-wrapper-2"><a href=""> FEEDBACK </a></div>
+        <div class="text-wrapper-3"><a href="{%url 'home'%}"> ABOUT </a></div>
+        <a href="{%url 'user_profile'%}" class="user-icon">👤</a>
+        <img class="whatsapp-image" src="https://i.postimg.cc/FRvX0wB1/petmedpal.png" />
+      </div>
+    </div>
+  </div>
+</body>
