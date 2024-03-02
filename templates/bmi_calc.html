@@ -1,0 +1,160 @@
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator</title>
+<style>
+    body {
+        font-family: "Mulish", Helvetica;
+        font-weight: 800;
+        color: #603d25;
+        background-color: #ede1cc;
+        margin: 0px;
+    }
+    #container1 {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #603d25;
+        border-radius: 5px;
+    }
+    #container2 {
+        position: absolute;
+        height: 356px;
+        top: 20%;
+        left: 30%;
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #603d25;
+        border-radius: 5px;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #603d25;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #result {
+        margin-top: 20px;
+    }
+    #text1{
+        position: absolute;
+        top: 80%;
+        left: 10%;
+        width: 1000px;
+    }
+    #text2{
+        position: absolute;
+        top: 120%;
+        left: 10%;
+        width: 1000px;
+    }
+    #back{
+        position: absolute;
+        top: 75%;
+        left: 45%;
+    }
+    .goback {
+        width: 100px;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #603d25;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;}
+</style>
+</head>
+<body>
+<div id="container1">
+    <h2>BMI Calculator for dogs</h2>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight">
+    <label for="height">Height (m):</label>
+    <input type="number" id="height">
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    <div id="result"></div>
+</div>
+<div id="container2">
+    <h2>BMI Calculator for cats</h2>
+    <label for="rc">RibCage (cm):</label>
+    <input type="number" id="rc">
+    <label for="lbl">LowerBackLeg (cm):</label>
+    <input type="number" id="lbl">
+    <button onclick="calculateBMIcat()">Calculate BMI</button>
+    <div id="fresult"></div>
+</div>
+<div id="back">
+    <a href="{%url 'diet_cons1'%}"><button id="goback">READ ABOUT BMI </button></a>
+</div>
+<div id="text1">
+    <h1> IMPORTANT INFORMATION FOR DOG OWNERS </h1>
+    <p> To estimate your dog’s body mass index, enter breed, sex, weight, and height above. Click calculate for instant results. It is important to note that the dog BMI calculator provides an estimation and should be used as a general guideline. For a comprehensive evaluation of your dog’s weight and health, consulting with a veterinarian is recommended. </p>
+    <br>
+</div>
+<div id="text2">
+    <h1>  IMPORTANT INFORMATION FOR CAT OWNERS </h1>
+    <p> The cat BMI calculator is based on the Feline Body Mass Index, which estimates your cat's body's fat content based on its proportions. It is simple and requires only two measurements. To use it, follow these instructions:Make sure your cat is standing with its head in an upright position. Measure your cat's rib cage. Ideally, you want to do this at the 9th rib level, located by the cat's front legs. Measure the length of your cat's lower back leg from the knee to the ankle.
+</div>
+
+<script>
+    function calculateBMI() {
+        var weight = parseFloat(document.getElementById('weight').value);
+        var height = parseFloat(document.getElementById('height').value);
+        var bmi = weight / (height * height);
+        var resultElement = document.getElementById('result');
+        resultElement.innerHTML = 'Your BMI is: ' + bmi.toFixed(2);
+        if (bmi < 3) {
+            resultElement.innerHTML += '<br>You are underweight.';
+        } else if (bmi >= 3 && bmi < 5) {
+            resultElement.innerHTML += '<br>Your weight is normal.';
+        } else if (bmi >= 5 && bmi < 8) {
+            resultElement.innerHTML += '<br>You are overweight.';
+        } else {
+            resultElement.innerHTML += '<br>You are obese.';
+        }
+    }
+
+
+    function calculateBMIcat() {
+        var rc = parseFloat(document.getElementById('rc').value);
+        var lbl = parseFloat(document.getElementById('lbl').value);
+        var res1 = rc / 0.70622;
+        var res2 = res1 - lbl;
+        var res3 = res2 / 0.9156;
+        var fres = res3 - lbl;
+        var resultElement = document.getElementById('fresult');
+        resultElement.innerHTML = 'Your BMI is: ' + fres.toFixed(2);
+        if (fres < 15) {
+            resultElement.innerHTML += '<br>You are underweight.';
+        } else if (fres >= 15 && fres < 30) {
+            resultElement.innerHTML += '<br>Your weight is normal.';
+        } else if (fres >= 30 && fres < 42) {
+            resultElement.innerHTML += '<br>You are overweight.';
+        } else {
+            resultElement.innerHTML += '<br>You are obese.';
+        }
+    }
+</script>
+</body>
+</html>
+

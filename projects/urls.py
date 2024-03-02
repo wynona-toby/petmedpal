@@ -14,4 +14,10 @@ urlpatterns=[
   path('diet_cons1/', views.diet_cons1, name='diet_cons1'),
   path('diet_cons2/', views.diet_cons2, name='diet_cons2'),
   path('vac_base_archive/', views.vac_base_archive, name='vac_base_archive'),
+  path('nearest_vet/', views.nearest_vet, name='nearest_vet'),
+  path('home_visit/', views.home_visit, name='home_visit'),
+  path('insurance/', views.insurance, name='insurance'),
+  path('bmi_calc/', views.bmi_calc, name='bmi_calc'),
+  path('calender/', views.calender, name='calender'),
+  path('view_profile/', views.view_profile, name='view_profile'),
 ]

@@ -1,164 +1,640 @@
-{% include 'navbar.html'%}
+{% include 'navbar.html' %}
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Wellness | PetMedPal </title>
+    <meta charset="utf-8" />
     <style>
       @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://fonts.googleapis.com/css?family=Mulish:600,800|Inter:400");
-* {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0px;
-  height: 100%;
-}
+      * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0px;
+        height: 100%;
+      }
 
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
-  text-decoration: none;
-}
-
-.frame {
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.frame .frame-wrapper {
-  background-image: url(https://c.animaapp.com/c8HFY3nI/img/rectangle-89.png);
-  background-size: cover;
-  background-position: 50% 50%;
-  width: 100%;
-  height: 700px;
-}
-
-.frame .div {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 65px;
-  top: 92px;
-  left: 183px;
-  align-items: center;
-  position: relative;
-}
-
-.frame .text-wrapper {
-  position: relative;
-  width: 1194px;
-  height: 126px;
-  margin-top: -1px;
-  font-family: "Mulish", Helvetica;
-  font-weight: 800;
-  color: #603d25;
-  font-size: 50px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.frame .p {
-  position: relative;
-  width: 1045px;
-  height: 201px;
-  font-family: "Mulish", Helvetica;
-  font-weight: 600;
-  color: #603d25;
-  font-size: 30px;
-  text-align: justify;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.frame .div-2 {
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 61px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.frame .div-wrapper {
-  display: flex;
-  width: 299px;
-  height: 50px;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  background-color: #603d25;
-  border-radius: 20px;
-  align-items: center;
-  position: relative;
-}
-
-.frame .text-wrapper-2 {
-  position: relative;
-  width: 301px;
-  margin-top: -1px;
-  margin-left: -11px;
-  margin-right: -11px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #b99976;
-  font-size: 25px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.frame .text-wrapper-3 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #b99976;
-  font-size: 25px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-:root {
-  --main-font-color: rgba(96, 61, 37, 1);
-  --button-color: rgba(159, 126, 104, 1);
-  --STD-TEXT-font-family: "Mulish-SemiBold", Helvetica;
-  --STD-TEXT-font-weight: 600;
-  --STD-TEXT-font-size: 12px;
-  --STD-TEXT-letter-spacing: 0px;
-  --STD-TEXT-line-height: normal;
-  --STD-TEXT-font-style: normal;
-}
-
-    </style>
+      button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+        outline: -webkit-focus-ring-color auto 5px !important;
+      }
+      a {
+        text-decoration: none;
+      }
+      .frame {
+        width: 100%;
+        height: 4709px;
+        background-image: url(https://i.postimg.cc/8P11rgfB/Rectangle-89.png);
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      
+      .frame .overlap {
+        position: relative;
+        width: 1194px;
+        height: 4709px;
+        left: 123px;
+      }
+      
+      .frame .rectangle {
+        position: absolute;
+        width: 1200px;
+        height: 4709px;
+        top: 0;
+        left: 45px;
+        background-color: #b99976b2;
+      }
+      
+      .frame .div {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 52px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+      }
+      
+      .frame .div-wrapper {
+        position: relative;
+        width: 1194px;
+        height: 126px;
+      }
+      
+      .frame .text-wrapper {
+        position: absolute;
+        width: 1194px;
+        top: -1px;
+        left: 0;
+        font-family: "Mulish-ExtraBold", Helvetica;
+        font-weight: 800;
+        color: #603d25;
+        font-size: 50px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .frame .p {
+        position: relative;
+        width: 1045px;
+        height: 201px;
+        font-family: "Mulish-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #603d25;
+        font-size: 30px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .frame .div-wrapper-2 {
+        display: flex;
+        width: 299px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 556px;
+        left: 447px;
+        background-color: #603d25;
+        border-radius: 20px;
+      }
+      
+      .frame .text-wrapper-2 {
+        position: relative;
+        width: 301px;
+        margin-top: -1px;
+        margin-left: -11px;
+        margin-right: -11px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #b99976;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .frame .div-2 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 62px;
+        position: absolute;
+        top: 750px;
+        left: 129px;
+      }
+      
+      .frame .div-3 {
+        position: relative;
+        width: 926px;
+        height: 957px;
+      }
+      
+      .frame .ellipse {
+        left: 334px;
+        position: absolute;
+        width: 258px;
+        height: 258px;
+        top: 0;
+        object-fit: cover;
+      }
+      
+      .frame .beagles-are-not-a {
+        position: absolute;
+        width: 926px;
+        top: 352px;
+        left: 0;
+        font-family: "Mulish-Medium", Helvetica;
+        font-weight: 400;
+        color: transparent;
+        font-size: 20px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .frame .span {
+        font-weight: 500;
+        color: #603d25;
+      }
+      
+      .frame .text-wrapper-3 {
+        font-family: "Mulish-Bold", Helvetica;
+        font-weight: 700;
+        color: #603d25;
+      }
+      
+      .frame .text-wrapper-4 {
+        font-weight: 500;
+        color: #000000;
+      }
+      
+      .frame .text-wrapper-5 {
+        position: absolute;
+        top: 269px;
+        left: 335px;
+        text-shadow: 0px 4px 4px #00000040;
+        font-family: "Mulish-ExtraBold", Helvetica;
+        font-weight: 800;
+        color: #603d25;
+        font-size: 50px;
+        letter-spacing: 10px;
+        line-height: normal;
+      }
+      
+      .frame .div-4 {
+        position: relative;
+        width: 926px;
+        height: 945px;
+      }
+      
+      .frame .img {
+        position: absolute;
+        width: 258px;
+        height: 258px;
+        top: 0;
+        left: 333px;
+      }
+      
+      .frame .text-wrapper-6 {
+        position: absolute;
+        top: 269px;
+        left: 135px;
+        text-shadow: 0px 4px 4px #00000040;
+        font-family: "Mulish-ExtraBold", Helvetica;
+        font-weight: 800;
+        color: #603d25;
+        font-size: 50px;
+        letter-spacing: 10px;
+        line-height: normal;
+      }
+      
+      .frame .golden-retrievers {
+        position: absolute;
+        width: 926px;
+        top: 352px;
+        left: 0;
+        font-family: "Mulish-Medium", Helvetica;
+        font-weight: 400;
+        color: #603d25;
+        font-size: 20px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .frame .text-wrapper-7 {
+        font-weight: 500;
+      }
+      
+      .frame .text-wrapper-8 {
+        font-family: "Mulish-Bold", Helvetica;
+        font-weight: 700;
+      }
+      
+      .frame .group-wrapper {
+        position: relative;
+        width: 931px;
+        height: 757px;
+      }
+      
+      .frame .group {
+        position: relative;
+        width: 933px;
+        height: 757px;
+      }
+      
+      .frame .ellipse-wrapper {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        top: 0;
+        left: 341px;
+      }
+      
+      .frame .ellipse-2 {
+        left: -4px;
+        position: absolute;
+        width: 258px;
+        height: 258px;
+        top: 0;
+        object-fit: cover;
+      }
+      
+      .frame .overlap-group-wrapper {
+        position: absolute;
+        width: 935px;
+        height: 398px;
+        top: 359px;
+        left: 0;
+      }
+      
+      .frame .overlap-group {
+        position: relative;
+        width: 931px;
+        height: 398px;
+      }
+      
+      .frame .siamese-cats-are-not {
+        position: absolute;
+        width: 924px;
+        top: 0;
+        left: 0;
+        font-family: "Mulish-Medium", Helvetica;
+        font-weight: 400;
+        color: #603d25;
+        font-size: 20px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .frame .text-wrapper-9 {
+        font-weight: 500;
+        font-size: 24px;
+      }
+      
+      .frame .text-wrapper-10 {
+        font-family: "Mulish-Regular", Helvetica;
+      }
+      
+      .frame .text-wrapper-11 {
+        font-family: "Mulish-Bold", Helvetica;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      
+      .frame .LIVING-TEMPERATURE {
+        position: absolute;
+        width: 931px;
+        top: 84px;
+        left: 0;
+        font-family: "Mulish-Bold", Helvetica;
+        font-weight: 400;
+        color: #603d25;
+        font-size: 20px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .frame .text-wrapper-12 {
+        font-weight: 700;
+      }
+      
+      .frame .text-wrapper-13 {
+        font-family: "Mulish-Medium", Helvetica;
+        font-weight: 500;
+      }
+      
+      .frame .text-wrapper-14 {
+        font-weight: 700;
+        font-size: 24px;
+      }
+      
+      .frame .text-wrapper-15 {
+        position: absolute;
+        top: 273px;
+        left: 236px;
+        text-shadow: 0px 4px 4px #00000040;
+        font-family: "Mulish-ExtraBold", Helvetica;
+        font-weight: 800;
+        color: #603d25;
+        font-size: 50px;
+        text-align: center;
+        letter-spacing: 10px;
+        line-height: normal;
+      }
+      
+      .frame .div-5 {
+        position: relative;
+        width: 936px;
+        height: 951px;
+      }
+      
+      .frame .ellipse-3 {
+        left: 330px;
+        position: absolute;
+        width: 258px;
+        height: 258px;
+        top: 0;
+        object-fit: cover;
+      }
+      
+      .frame .overlap-2 {
+        position: absolute;
+        width: 936px;
+        height: 681px;
+        top: 269px;
+        left: 0;
+      }
+      
+      .frame .text-wrapper-16 {
+        position: absolute;
+        width: 811px;
+        top: 0;
+        left: 59px;
+        text-shadow: 0px 4px 4px #00000040;
+        font-family: "Mulish-ExtraBold", Helvetica;
+        font-weight: 800;
+        color: #603d25;
+        font-size: 50px;
+        text-align: justify;
+        letter-spacing: 10px;
+        line-height: normal;
+      }
+      
+      .frame .although-domestic {
+        position: absolute;
+        width: 936px;
+        top: 48px;
+        left: 0;
+        font-family: "Mulish-Medium", Helvetica;
+        font-weight: 400;
+        color: #603d25;
+        font-size: 40px;
+        text-align: justify;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+      
+      .frame .text-wrapper-17 {
+        font-weight: 500;
+        font-size: 20px;
+      }
+      
+      .frame .text-wrapper-18 {
+        font-family: "Mulish-Bold", Helvetica;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      
+      .frame .text-wrapper-19 {
+        font-family: "Mulish-Regular", Helvetica;
+        font-size: 20px;
+      }
+      
+      .frame .text-wrapper-20 {
+        font-family: "Mulish-ExtraBold", Helvetica;
+        font-weight: 800;
+        font-size: 20px;
+      }
+      
+      .frame .BACK-wrapper {
+        display: flex;
+        width: 161px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 4599px;
+        left: 520px;
+        background-color: #603d25;
+        border-radius: 20px;
+      }
+      
+      .frame .BACK {
+        position: relative;
+        width: 140px;
+        margin-top: -6px;
+        margin-bottom: -4px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #b99976;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+</style>
   </head>
   <body>
     <div class="frame">
-      <div class="frame-wrapper">
+      <div class="overlap">
+        <div class="rectangle"></div>
         <div class="div">
-          <p class="text-wrapper">Thriving Tails, Vibrant Lives: Nurturing Pet Wellness Together</p>
+          <div class="div-wrapper">
+            <p class="text-wrapper">Thriving Tails, Vibrant Lives: Nurturing Pet Wellness Together</p>
+          </div>
           <p class="p">
             Ensuring your pet’s well-being involves a holistic approach encompassing nutrition, regular exercise,
             preventive healthcare, and lots of love. A balanced diet tailored to their needs, routine veterinary
             check-ups, and engaging playtime contribute to their physical health, while mental stimulation and
             companionship are vital for their emotional happiness.
           </p>
-          <div class="div-2">
-            <div class="div-wrapper"><div class="text-wrapper-2">Shop products now</div></div>
-            <div class="div-wrapper"><div class="text-wrapper-3">Read about Wellness</div></div>
+        </div>
+        <div class="div-wrapper-2"><a href="https://www.amazon.in/Pet-Supplies/b/ref_=petsupseo?ie=UTF8&node=2454181031" class="text-wrapper-2">Shop products now</a></div>
+        <div class="div-2">
+          <div class="div-3">
+            <img class="ellipse" src="https://i.postimg.cc/prBR1q4F/Ellipse-42.png" />
+            <p class="beagles-are-not-a">
+              <span class="span"
+                >Beagles are not a high maintenance dog. Beagles are an intelligent and affectionate breed of dog that
+                require minimal maintenance and are relatively low-maintenance compared to other breeds. Beagles love
+                attention and affection, but they need a lot of time outside. They have a superior sense of smell, and
+                love to use their working instincts to &#39;hunt&#39; scents outdoors.<br /><br
+              /></span>
+              <span class="text-wrapper-3">LIVING TEMPERATURE:<br /></span>
+              <span class="span"
+                >Beagles, as a breed, are quite adaptable to different weather conditions. However, they are most
+                comfortable in temperatures ranging from 60°F to 75°F (15°C to 24°C). In general, temperatures above
+                85°F (29°C) can be considered too hot for beagles and may put them at risk of overheating.<br /><br
+              /></span>
+              <span class="text-wrapper-3">DAILY CARE:<br /></span>
+              <span class="span"
+                >As long as your groomer is using a safe shampoo, a beagle can be given a bath as often as once per day,
+                but normally every 2,4,6 or 8 weeks. Whilst a Beagle&#39;s coat is easy to clean and care for, they
+                should still be groomed at least once a week. Grooming can be a good time to check your dog for any
+                lumps or signs of parasites, as well as their ears for signs of infection such as brown or black wax and
+                a strange smell.<br /><br
+              /></span>
+              <span class="text-wrapper-3">FOOD TIMINGS AND DIET:<br /></span>
+              <span class="span"
+                >As a general rule, adult Beagles will require about 1.5 to 2 cups of high-quality dog food per day,
+                divided into two meals. Beagles are known to have a strong appetite. Meat, bone, offal and a small
+                amount of plant<br />ingredients are all important ingredients in the diet of a Beagle. A raw diet
+                contains, on average, 70% moisture/ water, which helps to keep your Beagle properly hydrated.<br /><br /><br
+              /></span>
+              <span class="text-wrapper-3"><br /><br /><br /></span>
+              <span class="span"><br /><br /></span>
+              <span class="text-wrapper-3"><br /><br /><br /></span>
+              <span class="span"><br /><br /></span>
+              <span class="text-wrapper-3"><br /><br /><br /></span>
+              <span class="span"><br /></span>
+              <span class="text-wrapper-4"><br /><br /></span>
+            </p>
+            <div class="text-wrapper-5">BEAGLE</div>
+          </div>
+          <div class="div-4">
+            <img class="img" src="https://i.postimg.cc/BZ5S6nbn/Ellipse-42-1.png" />
+            <div class="text-wrapper-6">GOLDEN RETRIEVER</div>
+            <p class="golden-retrievers">
+              <span class="text-wrapper-7"
+                >Golden Retrievers are very active dogs and need plenty of opportunities to exercise, play and get rid
+                of excess energy. Your Golden Retriever will need a minimum of two hours of good exercise per day.In
+                some ways, like grooming, socializing with other dogs, and exercising, Golden Retrievers can be
+                considered high maintenance. However, these pooches are also super adaptable, friendly with other people
+                and dogs, and can be easily trained.<br /><br
+              /></span>
+              <span class="text-wrapper-8">LIVING TEMPERATURE: <br /></span>
+              <span class="text-wrapper-7"
+                >Golden Retrievers thrive in moderate temperatures similar to what humans find comfortable. A room
+                temperature range of 68-75°F (20-24°C) is <br />generally considered ideal.<br /><br
+              /></span>
+              <span class="text-wrapper-8">DAILY CARE:<br /></span>
+              <span class="text-wrapper-7"
+                >You can bathe golden retrievers every 4-6 weeks or as often as necessary. Bathing them too often could
+                inflict major harm on their double coat. Instead, focus on regular brushing and grooming to remove loose
+                hair, dirt, and debris.<br />Make it a habit to spend some quality time brushing your dog to keep the
+                coat separated and divided which, in turn, will allow the skin to breathe.<br /><br
+              /></span>
+              <span class="text-wrapper-8">FOOD TIMINGS AND DIET:<br /></span>
+              <span class="text-wrapper-7"
+                >DO NOT free feed your golden; instead feed a measured amount of food twice a day. Most adult goldens
+                will eat 1 cup of premium dog food twice a day. Meat, bone, offal and a small amount of plant
+                ingredients are all important ingredients in the diet of a Golden Retriever, each adding highly
+                beneficial vitamins and minerals to meal times.<br /><br /><br /><br
+              /></span>
+              <span class="text-wrapper-8"><br /></span>
+              <span class="text-wrapper-7"><br /><br /><br /></span>
+              <span class="text-wrapper-8"><br /><br /></span>
+              <span class="text-wrapper-7"><br /><br /><br /><br /></span>
+            </p>
+          </div>
+          <div class="group-wrapper">
+            <div class="group">
+              <div class="ellipse-wrapper"><img class="ellipse-2" src="https://i.postimg.cc/yxK7PwQK/Ellipse-36.png" /></div>
+              <div class="overlap-group-wrapper">
+                <div class="overlap-group">
+                  <p class="siamese-cats-are-not">
+                    <span class="text-wrapper-7"
+                      >Siamese cats are not well suited to the great outdoors and should not be allowed to roam outside
+                      unsupervised. They are not considered high maintenance in terms of grooming but they are high
+                      maintenance when it comes to playtime, cuddle time and general interaction with you.<br /><br
+                    /></span>
+                    <span class="text-wrapper-9"><br /><br /></span>
+                    <span class="text-wrapper-8">DAILY CARE:<br /></span>
+                    <span class="text-wrapper-10"
+                      >A bath every 4-6 weeks is usually sufficient, unless they get into something particularly messy.
+                      With their short coat laying flat against their skin, <br />Siamese cats do not require any
+                      particular grooming. Weekly combing will be more than enough to remove dead hairs and distribute
+                      skin oils. <br /><br
+                    /></span>
+                    <span class="text-wrapper-8">FOOD TIMINGS AND DIET:<br /></span>
+                    <span class="text-wrapper-10"
+                      >A Siamese kitten should be fed between 3 - 4 meals per day. A combination of wet and dry food
+                      crafted with high quality and natural ingredients will work well for your Siamese cat.<br /><br /><br /><br
+                    /></span>
+                    <span class="text-wrapper-7"><br /></span>
+                    <span class="text-wrapper-8"><br /></span>
+                    <span class="text-wrapper-11"><br /></span>
+                  </p>
+                  <p class="LIVING-TEMPERATURE">
+                    <span class="text-wrapper-12">LIVING TEMPERATURE :<br /></span>
+                    <span class="text-wrapper-13">Siamese cats prefer temperatures between 75-86°F.<br /></span>
+                    <span class="text-wrapper-14"><br /><br /></span>
+                  </p>
+                </div>
+              </div>
+              <div class="text-wrapper-15">SIAMESE CAT</div>
+            </div>
+          </div>
+          <div class="div-5">
+            <img class="ellipse-3" src="https://i.postimg.cc/W3g2027S/Ellipse-41.png" />
+            <div class="overlap-2">
+              <div class="text-wrapper-16">DOMESTIC SHORTHAIR</div>
+              <p class="although-domestic">
+                <span class="text-wrapper-7"><br /></span>
+                <span class="text-wrapper-17"
+                  >Although Domestic Shorthair cats are great first-time cats, owners should have time to play with them
+                  because of their playful nature. If possible, Domestic Shorthair cats should have plenty of time
+                  outdoors. If you have a big back garden, or you live in a rural area, you&#39;re the ideal Domestic
+                  Shorthair cat owner.<br /><br
+                /></span>
+                <span class="text-wrapper-18">LIVING TEMPERATURE:<br /></span>
+                <span class="text-wrapper-17"
+                  >Your cat needs to maintain a body temperature of above 90 degrees to ward off hypothermia, so keeping
+                  your thermostat around 70 degrees<br />is a good way to ensure they&#39;ll stay cozy all winter
+                  long.<br /><br
+                /></span>
+                <span class="text-wrapper-18">DAILY CARE: <br /></span>
+                <span class="text-wrapper-17"
+                  >In general, cats should be given a bath once every 4-6 weeks, depending on how often they groom
+                  themselves, and the environment they&#39;re usually in. Domestic short-haired cats generally do a good
+                  job of grooming themselves. However, grooming sessions at least once a week are still important to
+                  help keep their coat in a good condition.<br /><br
+                /></span>
+                <span class="text-wrapper-18">FOOD TIMINGS AND DIET:<br /></span>
+                <span class="text-wrapper-19"
+                  >Cats should eat at least two meals each day, about 12 hours apart. But a breakfast, lunch, afternoon,
+                  dinner, and right before bed schedule is an equally great option. If more than 12 hours elapses
+                  between meals, the stomach can become hyperacidic causing nausea. Cat should be provided high protein
+                  cat food with high-quality animal meat as well as gut-friendly probiotics or prebiotics to keep our
+                  moggies&#39; tummies healthy and poops happy.<br /><br /><br
+                /></span>
+                <span class="text-wrapper-18"><br /><br /><br /></span>
+                <span class="text-wrapper-17"><br /><br /></span>
+                <span class="text-wrapper-20"><br /><br /></span>
+                <span class="text-wrapper-18"><br /></span>
+                <span class="text-wrapper-17"><br /></span>
+                <span class="text-wrapper-7"><br /></span>
+              </p>
+            </div>
           </div>
         </div>
+        <div class="BACK-wrapper"><div class="BACK">BACK -&gt;</div></div>
       </div>
     </div>
   </body>
 </html>
-{% include 'footer.html'%}
+
+
+{% include 'footer.html' %}

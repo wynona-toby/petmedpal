@@ -1,0 +1,37 @@
+<!-- view_profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+      body {
+        margin: 0px;
+        height: 100%;
+        font: "Mulish", Helvetica;
+      }
+      .p{
+        font: "Mulish", Helvetica;
+      }
+    </style>
+</head>
+<body>
+    <h1>User Profile</h1>
+    {% if user_profile %}
+        <p><strong>Username:</strong> {{ user_profile.user.username }}</p>
+        <p><strong>Name:</strong> {{ user_profile.name }}</p>
+        <p><strong>Contact Number:</strong> {{ user_profile.contact_number }}</p>
+        <p><strong>Age:</strong> {{ user_profile.age }}</p>
+        <p><strong>D.O.B:</strong> {{ user_profile.date_of_birth }}</p>
+        <p><strong>Email:</strong> {{ user_profile.email }}</p>
+        <p><strong>Address:</strong> {{ user_profile.address }}</p>
+        <p><strong>Pet Name:</strong> {{ user_profile.pet_name }}</p>
+        <p><strong>Pet Breed:</strong> {{ user_profile.pet_breed }}</p>
+        <p><strong>Documents:</strong> {{ user_profile.documents }}</p>
+    {% else %}
+        <p>No profile found for the current user.</p>
+    {% endif %}
+</body>
+</html>

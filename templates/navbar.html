@@ -83,6 +83,17 @@
   a:hover {
     color: #f7efe4;
   }
+  p{
+    position: absolute;
+    font-family: "Mulish-SemiBold", Helvetica;
+    font-weight: 300;
+    color: var(--main-font-color);
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: none;
+    left: 100px;
+  }
 </style>
 
 <body>
@@ -95,6 +106,7 @@
         <div class="text-wrapper-3"><a href="{%url 'home'%}"> ABOUT </a></div>
         <a href="{%url 'user_profile'%}" class="user-icon">👤</a>
         <img class="whatsapp-image" src="https://i.postimg.cc/FRvX0wB1/petmedpal.png" />
+        <p>WELCOME, {{request.user}}</p>
       </div>
     </div>
   </div>

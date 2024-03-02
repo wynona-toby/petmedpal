@@ -1,0 +1,446 @@
+{%include 'navbar.html'%}
+<style>
+
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+  @import url("https://fonts.googleapis.com/css?family=Mulish:700,600,800|Cairo:400|Inter:400");
+  * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0px;
+    height: 100%;
+  }
+  /* a blue color as a generic focus style */
+  button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+  }
+  a {
+    text-decoration: none;
+  }
+  .frame {
+    width: 100%;
+    height: 1695px;
+  }
+  
+  .frame .overlap {
+    position: relative;
+    height: 1703px;
+    top: -4px;
+    background-image: url(https://c.animaapp.com/IOpGtE3c/img/image-1.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .frame .text-wrapper {
+    position: absolute;
+    width: 1162px;
+    top: 72px;
+    left: 139px;
+    font-family: "Mulish", Helvetica;
+    font-weight: 800;
+    color: #603d25;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .div {
+    position: absolute;
+    width: 1162px;
+    top: 218px;
+    left: 139px;
+    font-family: "Mulish", Helvetica;
+    font-weight: 600;
+    color: #603d25;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .div-2 {
+    display: flex;
+    width: 493px;
+    top: 333px;
+    left: 458px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #603d25;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+  }
+  
+  .frame .text-wrapper-2 {
+    position: relative;
+    width: 434px;
+    margin-top: -1px;
+    margin-left: -5.5px;
+    font-family: "Mulish", Helvetica;
+    font-weight: 700;
+    color: #603d25;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .expand-arrow {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: -5.5px;
+  }
+  
+  .frame .group {
+    position: absolute;
+    width: 1162px;
+    height: 1006px;
+    top: 528px;
+    left: 139px;
+  }
+  
+  .frame .div-3 {
+    position: absolute;
+    width: 354px;
+    height: 450px;
+    top: 0;
+    left: 0;
+  }
+  
+  .frame .overlap-group {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+  
+  .frame .ellipse {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 45px;
+    left: 79px;
+    object-fit: cover;
+  }
+  
+  .frame .div-wrapper {
+    display: inline-flex;
+    height: 51px;
+    top: 252px;
+    left: 24px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #603d25;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+  }
+  
+  .frame .text-wrapper-3 {
+    position: relative;
+    width: 281px;
+    height: 36px;
+    margin-top: -4.5px;
+    margin-bottom: -0.5px;
+    font-family: "Cairo", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .frame .text-wrapper-4 {
+    position: absolute;
+    width: 261px;
+    height: 25px;
+    top: 329px;
+    left: 38px;
+    font-family: "Cairo", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 35px;
+    white-space: nowrap;
+  }
+  
+  .frame .text-wrapper-5 {
+    position: absolute;
+    width: 234px;
+    height: 27px;
+    top: 364px;
+    left: 68px;
+    font-family: "Cairo", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 35px;
+    white-space: nowrap;
+  }
+  
+  .frame .rupee {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 362px;
+    left: 38px;
+  }
+  
+  .frame .overlap-wrapper {
+    position: absolute;
+    width: 354px;
+    height: 450px;
+    top: 0;
+    left: 406px;
+  }
+  
+  .frame .overlap-2 {
+    position: relative;
+    height: 450px;
+  }
+  
+  .frame .rectangle {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+  
+  .frame .overlap-group-wrapper {
+    position: absolute;
+    width: 354px;
+    height: 450px;
+    top: 556px;
+    left: 0;
+  }
+  
+  .frame .group-2 {
+    position: absolute;
+    width: 354px;
+    height: 450px;
+    top: 556px;
+    left: 404px;
+  }
+  
+  .frame .group-3 {
+    position: absolute;
+    width: 354px;
+    height: 450px;
+    top: 556px;
+    left: 812px;
+  }
+  
+  .frame .overlap-3 {
+    position: absolute;
+    width: 354px;
+    height: 450px;
+    top: 0;
+    left: 812px;
+  }
+  
+  .frame .BACK-wrapper {
+    display: flex;
+    width: 161px;
+    height: 40px;
+    top: 1597px;
+    left: 651px;
+    background-color: #603d25;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+  }
+  
+  .frame .BACK {
+    position: relative;
+    width: 140px;
+    margin-top: -6px;
+    margin-bottom: -4px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #b99976;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+    
+</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title> Nearest Vet </title>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="overlap">
+        <p class="text-wrapper">FIND LOCAL VETERINARIANS WHO CAN TAKE CARE OF YOUR PETS!</p>
+        <p class="div">The right care, right at your fingertips</p>
+        <div class="div-2">
+          <div class="text-wrapper-2">Area</div>
+          <img class="expand-arrow" src="https://c.animaapp.com/IOpGtE3c/img/expand-arrow@2x.png" />
+        </div>
+        <div class="group">
+          <div class="div-3">
+            <div class="div-3">
+              <div class="overlap-group">
+                <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                <div class="text-wrapper-4">10 years experience</div>
+                <div class="text-wrapper-5">1000 consultation fee</div>
+                <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+              </div>
+            </div>
+            <div class="div-3">
+              <div class="overlap-group">
+                <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                <div class="text-wrapper-4">10 years experience</div>
+                <div class="text-wrapper-5">1000 consultation fee</div>
+                <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+              </div>
+            </div>
+          </div>
+          <div class="overlap-wrapper">
+            <div class="overlap-2">
+              <div class="rectangle"></div>
+              <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+              <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+              <div class="text-wrapper-4">10 years experience</div>
+              <div class="text-wrapper-5">1000 consultation fee</div>
+              <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+              <div class="div-3">
+                <div class="overlap-group">
+                  <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                  <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                  <div class="text-wrapper-4">10 years experience</div>
+                  <div class="text-wrapper-5">1000 consultation fee</div>
+                  <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overlap-group-wrapper">
+            <div class="overlap-2">
+              <div class="rectangle"></div>
+              <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+              <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+              <div class="text-wrapper-4">10 years experience</div>
+              <div class="text-wrapper-5">1000 consultation fee</div>
+              <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+              <div class="div-3">
+                <div class="overlap-group">
+                  <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                  <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                  <div class="text-wrapper-4">10 years experience</div>
+                  <div class="text-wrapper-5">1000 consultation fee</div>
+                  <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group-2">
+            <div class="overlap-2">
+              <div class="rectangle"></div>
+              <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+              <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+              <div class="text-wrapper-4">10 years experience</div>
+              <div class="text-wrapper-5">1000 consultation fee</div>
+              <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+              <div class="div-3">
+                <div class="overlap-group">
+                  <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                  <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                  <div class="text-wrapper-4">10 years experience</div>
+                  <div class="text-wrapper-5">1000 consultation fee</div>
+                  <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group-3">
+            <div class="overlap-2">
+              <div class="rectangle"></div>
+              <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+              <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+              <div class="text-wrapper-4">10 years experience</div>
+              <div class="text-wrapper-5">1000 consultation fee</div>
+              <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+              <div class="div-3">
+                <div class="overlap-group">
+                  <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                  <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                  <div class="text-wrapper-4">10 years experience</div>
+                  <div class="text-wrapper-5">1000 consultation fee</div>
+                  <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overlap-3">
+            <div class="div-3">
+              <div class="overlap-2">
+                <div class="rectangle"></div>
+                <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                <div class="text-wrapper-4">10 years experience</div>
+                <div class="text-wrapper-5">1000 consultation fee</div>
+                <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+                <div class="div-3">
+                  <div class="overlap-group">
+                    <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                    <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                    <div class="text-wrapper-4">10 years experience</div>
+                    <div class="text-wrapper-5">1000 consultation fee</div>
+                    <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="div-3">
+              <div class="overlap-2">
+                <div class="rectangle"></div>
+                <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                <div class="text-wrapper-4">10 years experience</div>
+                <div class="text-wrapper-5">1000 consultation fee</div>
+                <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+                <div class="div-3">
+                  <div class="overlap-group">
+                    <img class="ellipse" src="https://c.animaapp.com/IOpGtE3c/img/ellipse-29-13@2x.png" />
+                    <div class="div-wrapper"><div class="text-wrapper-3">Dr. Sayali Ramteke</div></div>
+                    <div class="text-wrapper-4">10 years experience</div>
+                    <div class="text-wrapper-5">1000 consultation fee</div>
+                    <img class="rupee" src="https://c.animaapp.com/IOpGtE3c/img/rupee-13@2x.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="BACK-wrapper"><div class="BACK">BACK -&gt;</div></div>
+      </div>
+    </div>
+  </body>
+</html>
+{%include 'footer.html'%}

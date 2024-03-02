@@ -1,0 +1,62 @@
+<html>  
+<head>  
+    <title>Fullcalendar</title> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script> 
+    <style>
+        body {
+            font-family: 'Mulish', Helvetica;
+            background-color: #f7efe4;
+            margin: 0px;
+          }
+        </style>
+</head>
+<body>
+    <h2><center>VACCINATION TRACKER</center></h2>
+    <br>
+    <br>
+    <div class="container">
+        <div id="calendar"></div>
+    </div>
+    <br>
+
+    <script>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                header:
+                {
+                    left: 'month, agendaWeek, agendaDay, list',
+                    center: 'title',
+                    right: 'prev, today, next'
+                },
+                footer:
+                {
+                    left: 'month, agendaWeek, agendaDay, list',
+                    center: 'title',
+                    right: 'prev, today, next'
+                },
+                buttonText:
+                {
+                    today: 'Today',
+                    month: 'Month',
+                    week: 'Week',
+                    day: 'Day',
+                    list: 'List'
+                },
+                events: [
+                    {% for event in events %}
+                    {
+                        title: '{{ event.title }}',
+                        start: '{{ event.start|date:"Y-m-d" }}',
+                        end: '{{ event.end|date:"Y-m-d" }}'
+                    }{% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
