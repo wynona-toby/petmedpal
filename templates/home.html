@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <style>
-        /* Add your CSS styles here */
         body {
             font-family: "Mulish", Helvetica, sans-serif;
             background-color: #f7efe4;
@@ -46,9 +45,55 @@
             line-height: 1.6;
             color: rgba(96, 61, 37, 1);
         }
+        :root{
+            --main_bg: #e6d4b6;
+            --pri_font: #603d25;
+            --sec_font: #5B4C42;
+            --ter_font: #987554;
+            --font_fam: 'Mulish', sans-serif;
+          }
+          nav{
+            background: var(--main_bg);
+            height: 80px;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 11;
+          }
+          nav img{
+            height: 70px;
+          }
+          nav ul{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+            width: inherit;
+            justify-content: flex-end;
+            margin: 0 50px;
+          }
+          nav ul li{
+            padding: 0 50px;
+          }
+          nav ul li a{
+            color: var(--sec_font);
+            text-decoration: none;
+            cursor: pointer;
+          }
+          
     </style>
 </head>
 <body>
+    <nav>
+        <img src="https://i.postimg.cc/FRvX0wB1/petmedpal.png" alt="LOGO">
+        <ul>
+            <li><a href="{%url 'services'%}">SERVICES</a></li>
+            <li><a href="{%url 'home'%}"> ABOUT </a></li>
+            <li><a href=""> FEEDBACK </a></li>
+            <li><a href="{%url 'landing'%}"> LOGOUT </a></li>
+          </ul>
+      </nav>
     <div class="container">
         <h1>About Us</h1>
         <div class="content">
