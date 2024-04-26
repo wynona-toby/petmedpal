@@ -1,106 +1,104 @@
-
-
+{%include 'navbar.html'%}
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
-        body {
-            font-family: "Mulish", Helvetica, sans-serif;
-            background-color: #f7efe4;
-            margin: 0;
-            padding: 0;
-            color: rgba(96, 61, 37, 1);
-        }
+  <meta charset="utf-8" />
+  <title>About Us | PetMedPal</title>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+  @import url("https://fonts.googleapis.com/css?family=Mulish:700,600,800|Cairo:400|Inter:400");
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Mulish", Helvetica, sans-serif;
+      background-color: #f7efe4;
+    }
+    h1 {
+      text-align: center;
+      padding-top: 80px;
+      font-weight: 800;
+    color: #603d25;
+    font-size: 50px;
+    }
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0px;
+      margin-top: 80px;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: rgba(96, 61, 37, 1);
-        }
-
-        .content {
-            margin-top: 20px;
-            text-align: justify;
-        }
-
-        img {
-            width: 200px;
-            height: 200px;
-            margin-left: 300px;
-        }
-
-        p {
-            margin-top: 20px;
-            font-size: 25px;
-            line-height: 1.6;
-            color: rgba(96, 61, 37, 1);
-        }
-        :root{
-            --main_bg: #e6d4b6;
-            --pri_font: #603d25;
-            --sec_font: #5B4C42;
-            --ter_font: #987554;
-            --font_fam: 'Mulish', sans-serif;
-          }
-          nav{
-            background: var(--main_bg);
-            height: 80px;
-            position: fixed;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            z-index: 11;
-          }
-          nav img{
-            height: 70px;
-          }
-          nav ul{
-            list-style-type: none;
-            display: flex;
-            align-items: center;
-            /* border: 2px solid red; */
-            width: inherit;
-            justify-content: flex-end;
-            margin: 0 50px;
-          }
-          nav ul li{
-            padding: 0 50px;
-          }
-          nav ul li a{
-            color: var(--sec_font);
-            text-decoration: none;
-            cursor: pointer;
-          }
-          
-    </style>
+    .img-container img {
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+    }
+    .img1 {
+      margin: 0 auto;
+      display: block;
+      padding: 10px;
+      margin-bottom: 0;
+      z-index: 20;
+    }
+    .aboutus-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 250px;
+    }
+    .aboutus-content {
+      text-align: justify;
+      font-family: "Mulish", Helvetica;
+      font-weight: 400;
+      font-size: 20px;
+      width: 1200px; 
+      padding: 20px;
+      background-color: #ffffff; 
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+      z-index: -2;
+    }
+    .aboutus-container2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+    }
+    .aboutus-content2 {
+      text-align: justify;
+      font-family: "Mulish", Helvetica;
+      font-weight: 400;
+      font-size: 20px;
+      width: 1200px; 
+      padding: 20px;
+      background-color: #ffffff; 
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <img src="https://i.postimg.cc/FRvX0wB1/petmedpal.png" alt="LOGO">
-        <ul>
-            <li><a href="{%url 'services'%}">SERVICES</a></li>
-            <li><a href="{%url 'home'%}"> ABOUT </a></li>
-            <li><a href=""> FEEDBACK </a></li>
-            <li><a href="{%url 'landing'%}"> LOGOUT </a></li>
-          </ul>
-      </nav>
-    <div class="container">
-        <h1>About Us</h1>
-        <div class="content">
-            <img src="https://i.postimg.cc/63GwV9BT/ea5a1eb7d9f1bca19e6a3280780a240f.jpg" alt="About Image">
-            <p>At PetMedPal, we believe in enhancing the lives of your furry companions through tailored pet nutrition and dedicated care. With a passion for promoting optimal well-being, we have become a trusted name in the pet health industry.</p>
-            <p>Our mission is clear - to provide pawsitively tailored diets that nourish your pets, one bowl at a time. We understand the significance of a well-balanced diet in ensuring a long, happy, and healthy life for your beloved pets. That's why we embark on a journey with pet owners, offering personalized nutrition plans crafted with expertise and backed by extensive research.</p>
-        </div>
+  <h1>About Us</h1>
+  <img src="https://i.postimg.cc/4xHxjTqc/imgg.png" alt="About Image" class="img1">
+  <div class="aboutus-container">
+    <div class="aboutus-content">
+      <br>
+At PetMedPal, we are dedicated to enhancing the lives of your furry companions through tailored pet nutrition and dedicated care. With a team of passionate professionals committed to promoting optimal well-being, we aim to earn a reputation as a trusted name in the pet health industry. <br><br> Our mission is clear - to provide pawsitively tailored services that help your pets, one pet at a time. The development of a comprehensive pet healthcare management web system stems from the growing need for a centralized and user-friendly platform to integrate and streamline the management of pet-related information and services. PetMedPal endeavours to enhance the pet care experience by fostering efficient communication between pet owners and veterinarians while providing easy access to crucial information, ultimately ensuring the well-being of beloved animal companions. <br><br>
+PetMedPal is a response to the contemporary society's growing need for effective pet healthcare management. It offers pet owners an easy-to-use platform to plan visits, keep track of medical records, and get timely reminders. PetMedPal ensures access to professional care by enabling remote consultations with veterinarians through the integration of telemedicine services.Our ultimate goal is to improve pets' health by making pet owners' healthcare administration easier.
+
     </div>
+  </div>
+  
+  <div class="img-container">
+    <img src="https://i.postimg.cc/0QGX19ys/Ellipse-1.png" alt="About Image 1">
+    <img src="https://i.postimg.cc/nchRNb8y/Ellipse-2.png" alt="About Image 2">
+    <img src="https://i.postimg.cc/c4k9S90r/Ellipse-3.png" alt="About Image 2">
+    <img src="https://i.postimg.cc/j2sgsBDJ/Ellipse-4.png" alt="About Image 2">
+  </div>
+  <div class="aboutus-container2">
+    <div class="aboutus-content2">
+      From the makers of PetMedPal, we're dedicated to making tails wag and hearts purr with joy. Our unwavering mission is to provide unparalleled care for your beloved furry family members, ensuring their happiness, health, and overall well-being. We deeply appreciate the trust you place in us by entrusting your pets' care to our capable hands. To us, they're not just pets; they're cherished members of your family, and we treat them as such. With a commitment to excellence and a passion for animal welfare, we strive to exceed your expectations every step of the way. From personalized nutrition plans to expert medical care, we offer a comprehensive range of services tailored to meet the unique needs of your pets. At PetMedPal, we're more than just a pet care provider – we're your trusted partners in ensuring the lifelong happiness and vitality of your furry companions. Thank you for choosing us to be a part of your pet's journey. Together, let's make every moment with them as joyful and fulfilling as possible.
+    </div>
+  </div>
 </body>
 </html>
+{%include 'footer.html'%}
