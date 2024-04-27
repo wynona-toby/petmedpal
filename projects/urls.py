@@ -20,4 +20,5 @@ urlpatterns=[
   path('bmi_calc/', views.bmi_calc, name='bmi_calc'),
   path('calender/', views.calender, name='calender'),
   path('view_profile/', views.view_profile, name='view_profile'),
+  path('feedback/', views.feedback, name='feedback'),
 ]

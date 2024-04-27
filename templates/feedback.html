@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Feedback Form | PetMedPal</title>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+      @import url("https://fonts.googleapis.com/css?family=Mulish:700,600,800|Cairo:400|Inter:400");
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Mulish", Helvetica, sans-serif;
+      background-color: #f7efe4;
+    }
+      .feedback-form {
+            width: 40%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+      .feedback-form h1 {
+            text-align: center;
+            padding-top: 20px;
+            font-weight: 800;
+            color: #603d25;
+            font-size: 30px;
+        }
+      .feedback-form label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+      .feedback-form input[type="text"],.feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+      .feedback-form button[type="submit"] {
+            background-color: #603d25;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+      .feedback-form button[type="submit"]:hover {
+            background-color: #4d301d;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-form">
+        <h1>Feedback Form</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+{%include 'footer.html'%}

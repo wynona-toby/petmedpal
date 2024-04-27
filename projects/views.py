@@ -111,7 +111,8 @@ def insurance(request):
   return render(request,'insurance.html')
 def bmi_calc(request):
   return render(request,'bmi_calc.html')
-
+def feedback(request):
+  return render(request,'feedback.html')
 
 
 
