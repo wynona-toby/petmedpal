@@ -1,7 +1,7 @@
 
 # PETMEDPAL - Pet HealthCare Web Application
 
-PetMedPal is a comprehensive pet care web application designed to streamline pet ownership responsibilities, while improving the health and wellbeing of the pets. The application employs a user-friendly interface to provide a variety of features including: monitoring pet health through digital pet profiles, scheduling and setting reminders` for vet appointments, vaccinations, and feeding times, dietary suggestions based on breed, age; and an easy access to the pet’s profile for ease of handling which makes it different from the other existing systems. 
+PetMedPal is a comprehensive pet care web application designed to streamline pet ownership responsibilities, while improving the health and wellbeing of the pets. The application employs a user-friendly interface to provide a variety of features including: monitoring pet health through digital pet profiles, scheduling and setting reminders` for vet appointments, vaccinations, and feeding times, dietary suggestions based on breed, age; and an easy access to the pet’s profile for ease of handling which makes it different from the other existing systems.
 
 ## Features
 
